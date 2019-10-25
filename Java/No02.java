@@ -18,7 +18,7 @@ class A {
     }
 }
 
-// 懒汉式 线程安全写法
+// 懒汉式 线程安全写法 双重锁机制
 class B {
     private static volatile B instance = null;
 
@@ -28,8 +28,7 @@ class B {
     public static B getInstance() {
         if (instance == null) {
             synchronized (B.class) {
-                if (instance == null)
-                    instance = new B();
+                if (instance == null) instance = new B();
             }
         }
         return instance;
