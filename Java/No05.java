@@ -2,6 +2,9 @@
  * 输入一个链表的头节点，从尾到头打印每个节点的值。
  */
 
+/**
+ * 太过于基础.自己不去实现了
+ */
 public class No05 {
 
     public static void main(String[] args) {
